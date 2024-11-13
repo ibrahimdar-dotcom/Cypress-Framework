@@ -1,0 +1,12 @@
+{
+    "login": {
+        "valid credentials" : {
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        "invalid credentials" : {
+            "username": "wrong_user",
+            "password": "nopassword"
+        }
+    }
+}
