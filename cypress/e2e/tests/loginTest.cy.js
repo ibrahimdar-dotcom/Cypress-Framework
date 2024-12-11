@@ -1,9 +1,11 @@
-import { loginPage } from "../../pages/loginPage"
+/// <reference types="cypress" />
+
+import { LoginPage } from "../../pages/loginPage"
 import loginData from "../../fixtures/loginData.json"
 
-const loginObj = new loginPage()
+const loginObj = new LoginPage()
 
-describe('login test cases', () => {
+describe('Login test cases', () => {
     it('verify login with valid username and password', () => {
         loginObj.openURL();
         cy.login(loginData.login["valid credentials"].username, 
@@ -11,7 +13,7 @@ describe('login test cases', () => {
         )
         loginObj.clickLogin();
         loginObj.getLogoImage().should('exist');
-    });
+    })
 
     it('verify login with invalid username and valid password', () => {
         loginObj.openURL()

@@ -1,11 +1,11 @@
-export class loginPage {
+export class LoginPage {
 
-    webElements = {
-        username_textbox : "#user-name",
-        password_textbox : "#password",
-        login_button : "#login-button",
-        error_message_box : "form > h3",
-        logo_image : ".app_logo"
+    constructor () {
+        this.username_textbox = "#user-name",
+        this.password_textbox = "#password",
+        this.login_button = "#login-button",
+        this.error_message_box = "form > h3",
+        this.logo_image = ".app_logo"
     }
 
     openURL(){
@@ -13,23 +13,23 @@ export class loginPage {
     }
 
     setUsername(username){
-        cy.get(this.webElements.username_textbox).type(username)
+        cy.get(this.username_textbox).type(username)
     }
 
     setPassword(password){
-        cy.get(this.webElements.password_textbox).type(password)
+        cy.get(this.password_textbox).type(password)
     }
 
     clickLogin(){
-        cy.get(this.webElements.login_button).click()
+        cy.get(this.login_button).click()
     }
 
     getLogoImage(){
-        return cy.get(this.webElements.logo_image)
+        return cy.get(this.logo_image)
     }
 
     getErrorBox(){
-        return cy.get(this.webElements.error_message_box)
+        return cy.get(this.error_message_box)
     }
 
 }

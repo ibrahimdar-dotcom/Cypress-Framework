@@ -1,6 +1,6 @@
-import { loginPage } from "../pages/loginPage"
+import { LoginPage } from "../pages/loginPage"
 
-const loginObj = new loginPage()
+const loginObj = new LoginPage()
 
 Cypress.Commands.add('login', (username, password) => {
     loginObj.setUsername(username);
